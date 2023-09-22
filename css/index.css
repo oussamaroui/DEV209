@@ -1,0 +1,98 @@
+*{box-sizing: border-box;}
+body, h1{
+    font-family: 'Varela Round', sans-serif;
+}
+article h1{
+    font-weight: bold;
+}
+#headerBG {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background: url(../images/batiment.jpg) center/cover no-repeat;
+}
+#headerBG h1,h3{
+    font-family: 'Gabriela', serif;
+}
+#headerBG h1{
+    animation: shadAnim 4s linear infinite alternate;
+}
+@keyframes shadAnim {
+    0%, 100% {
+        text-shadow: 0 0 20px white; 
+    }
+    50% {
+        text-shadow: none;
+    }
+}
+nav select{
+    width: 65px;
+}
+nav a, select{
+    transition: .5s;
+    flex-grow: 1;
+}
+nav a:hover, select:hover{
+    color: #03115f;
+    letter-spacing: .3;
+}
+
+/* ################################################ */
+.formation div img{ 
+    width: 100%; height: 100%; 
+    object-fit: cover; 
+    transition: all .5s ease; 
+    position: relative;
+} 
+.formation div img:hover{ 
+    transform:scale(1.1); 
+    opacity: .4;
+}
+.format{
+    background-color: #1616c2;
+    font-family: 'Varela Round', sans-serif;
+}
+.format p{
+    opacity: 0;
+    transition: .5s;
+}
+.format:hover p{
+    opacity: 1;
+}
+.format p:hover + img{
+    transform:scale(1.1); 
+    opacity: .4;
+}
+.format p:hover + p + img{
+    transform:scale(1.1); 
+    opacity: .4;
+}
+.format p:nth-child(2){
+    margin-top: 250px;
+    transition: .6s;
+}
+.format:hover p:nth-child(2){
+    margin-top: 220px;
+}
+.format p:nth-child(2):hover{
+    background-color: white;
+    color: #03115f;
+    cursor: pointer;
+}
+
+.dot{
+    animation: dotAnim 2s linear infinite alternate;
+}
+@keyframes dotAnim {
+    0%, 100% {
+        opacity: 1; 
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ########################################## */
+footer span:hover, svg:hover, .underline{
+    cursor: pointer;
+}

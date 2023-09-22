@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Varela+Round&display=swap"rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Inclusive+Sans&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Under Development</title>
+    <style>
+        body {
+            background-color: #efefef;
+            margin: 0;
+            padding: 0;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.146);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .adv {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            margin: 0 auto 20px;
+        }
+
+        .hmBtn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .hmBtn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <Header class="w-full mb-10">
+        <nav class="h-20 bg-white py-1 px-7 flex justify-between shadow-md">
+            <img src="images/logoprjctH.png" alt="dev209Logo" id="logo">
+            <ul class="list-none flex justify-between gap-6 items-center">
+                <a href="index.html" class="text-black no-underline">
+                    <li>Home</li>
+                </a>
+                <a href="#" class="text-black no-underline">
+                    <select class="w-20 items-center" id="slct">
+                        <option value="#">Pages</option>
+                        <option value="underDev.html">Inscription</option>
+                        <option value="emploi.html">Emploi du temps</option>
+                        <option value="underDev.html">Calendrier des événements</option>
+                        <option value="contact.html">Contact</option>
+                    </select>
+                </a>
+                <a href="underDev.html" class="text-black no-underline">
+                    <li>About</li>
+                </a>
+                <li><img width="35" height="35"
+                        src="https://img.icons8.com/external-inkubators-basic-outline-inkubators/500/external-user-profile-user-interface-inkubators-basic-outline-inkubators.png"
+                        alt="pdp" /></li>
+            </ul>
+        </nav>
+    </Header>
+
+    <div class="container">
+        <div class="adv">🚧</div>
+        <h1>En cours de développement</h1>
+        <p>Nous travaillons sur quelque chose de génial pour vous. Restez à l'écoute !</p>
+        <a href="index.html" class="hmBtn">Retour à la page d'accueil</a>
+    </div>
+
+    <script>
+        const pages = document.getElementById('slct');
+        pages.addEventListener('change', function () {
+            const slctpage = pages.value;
+
+            if (slctpage && slctpage !== '') {
+                window.location.href = slctpage;
+            }
+        });
+    </script>
+</body>
+
+</html>
